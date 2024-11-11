@@ -1,16 +1,16 @@
-import { Button, Center, MantineProvider } from "@mantine/core";
-import { useState } from "react";
+import { Center, MantineProvider, Stepper, StepperStep } from "@mantine/core";
 import "@mantine/core/styles.css";
+import classes from "./css_modules/Stepper.module.css";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <MantineProvider>
-      <Center w={1080}>
-        <Button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </Button>
+      <Center w={1080} p="lg">
+        <Stepper active={1} classNames={classes}>
+          <StepperStep label="Step1" completedIcon={1} />
+          <StepperStep label="Step2" />
+          <StepperStep label="Step3" />
+        </Stepper>
       </Center>
     </MantineProvider>
   );

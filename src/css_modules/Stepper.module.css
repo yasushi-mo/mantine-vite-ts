@@ -1,0 +1,13 @@
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stepIcon {
+  border: none; /* Remove the border for all steps */
+}
+
+.stepLabel {
+  margin-top: 8px; /* Space between icon and label */
+}
