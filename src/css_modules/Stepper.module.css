@@ -6,6 +6,11 @@
 
 .stepIcon {
   border: none; /* Remove the border for all steps */
+  background-color: gray;
+
+  &[data-progress] {
+    background-color: blue;
+  }
 }
 
 .stepLabel {
