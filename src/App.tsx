@@ -1,5 +1,5 @@
-import { Center, MantineProvider, Stepper, StepperStep } from "@mantine/core";
 import "@mantine/core/styles.css";
+import { Center, MantineProvider, Stepper, StepperStep } from "@mantine/core";
 import classes from "./css_modules/Stepper.module.css";
 
 function App() {
