@@ -1,18 +1,24 @@
 // organize-imports-ignore
 import "@mantine/core/styles.css";
-import { Center, MantineProvider, Stepper, StepperStep } from "@mantine/core";
-import classes from "./css_modules/Stepper.module.css";
+import "@mantine/notifications/styles.css";
+import { Button, MantineProvider } from "@mantine/core";
+import { Notifications, notifications } from "@mantine/notifications";
 
 function App() {
   return (
     <MantineProvider>
-      <Center w={1080} p="lg">
-        <Stepper active={1} classNames={classes}>
-          <StepperStep label="Step1" completedIcon={1} />
-          <StepperStep label="Step2" />
-          <StepperStep label="Step3" />
-        </Stepper>
-      </Center>
+      <Notifications />
+
+      <Button
+        onClick={() =>
+          notifications.show({
+            title: "Default notification",
+            message: "Do not forget to star Mantine on GitHub! 🌟",
+          })
+        }
+      >
+        Show notification
+      </Button>
     </MantineProvider>
   );
 }

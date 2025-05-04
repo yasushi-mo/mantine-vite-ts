@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "test": "npx playwright test",
     "lint": "eslint .",
     "preview": "vite preview",
     "prepare": "husky"
@@ -13,9 +14,10 @@
   "dependencies": {
     "@mantine/core": "7.17.7",
     "@mantine/hooks": "7.17.7",
+    "@mantine/notifications": "^7.17.7",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.28.0"
+    "react-router-dom": "^7.5.3"
   },
   "devDependencies": {
     "@eslint/js": "9.15.0",
@@ -41,8 +43,7 @@
   },
   "lint-staged": {
     "src/**/*.{ts,tsx,json,css,scss}": [
-      "prettier --write",
-      "next lint --fix --dir src"
+      "prettier --write"
     ]
   }
 }
